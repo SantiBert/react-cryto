@@ -1,42 +1,38 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { green, pink } from '@material-ui/core/colors';
-import Avatar from '@material-ui/core/Avatar';
-import FolderIcon from '@material-ui/icons/Folder';
-import PageviewIcon from '@material-ui/icons/Pageview';
-import AssignmentIcon from '@material-ui/icons/Assignment';
+import React from "react";
+// @material-ui/core components
+import { makeStyles } from "@material-ui/core/styles";
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-        display: 'flex',
-        '& > *': {
-            margin: theme.spacing(1),
-        },
-    },
-    pink: {
-        color: theme.palette.getContrastText(pink[500]),
-        backgroundColor: pink[500],
-    },
-    green: {
-        color: '#fff',
-        backgroundColor: green[500],
-    },
-}));
+// core components
+import GridContainer from "components/Grid/GridContainer.js";
+import Button from "components/CustomButtons/Button.js";
+import styles from "assets/jss/material-kit-react/views/landingPageSections/productStyle.js";
 
-export default function IconAvatars() {
+const useStyles = makeStyles(styles);
+
+export default function ContacSection() {
     const classes = useStyles();
-
     return (
-        <div className={classes.root}>
-            <Avatar>
-                <FolderIcon />
-            </Avatar>
-            <Avatar className={classes.pink}>
-                <PageviewIcon />
-            </Avatar>
-            <Avatar className={classes.green}>
-                <AssignmentIcon />
-            </Avatar>
+        <div className={classes.container}>
+            <div className={classes.textCenter + " " + classes.sharingArea}>
+                <GridContainer justify="center" >
+                    <h3 className={classes.title}>Contacto</h3>
+                </GridContainer>
+                <GridContainer justify="center" >
+                    <Button color="twitter" size="bg">
+                        <i className={classes.socials + " fab fa-telegram"} /> Telegram
+            </Button>
+                    <Button color="twitter" size="bg">
+                        <i className={classes.socials + " fab fa-telegram"} /> Telegram
+            </Button>
+                    <Button color="twitter" size="bg">
+                        <i className={classes.socials + " fab fa-telegram"} />
+                Telegram
+            </Button>
+                    <Button color="twitter" size="bg">
+                        <i className={classes.socials + " fab fa-telegram"} /> Telegram
+            </Button>
+                </GridContainer>
+            </div>
         </div>
     );
 }

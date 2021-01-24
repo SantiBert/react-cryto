@@ -10,6 +10,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 // @material-ui/icons
 import Favorite from "@material-ui/icons/Favorite";
+import Button from "components/CustomButtons/Button.js";
 
 import styles from "assets/jss/material-kit-react/components/footerStyle.js";
 
@@ -32,54 +33,66 @@ export default function Footer(props) {
         <div className={classes.left}>
           <List className={classes.list}>
             <ListItem className={classes.inlineBlock}>
-              <a
-                href="https://www.creative-tim.com/?ref=mkr-footer"
-                className={classes.block}
-                target="_blank"
+              <Button
+                color="transparent"
+                className={
+                  classes.navLink + " " + classes.socialIconsButton
+                }
               >
-                Creative Tim
-              </a>
+                <i className={classes.socialIcons + " " + classes.marginRight5 + " fab fa-twitter"
+                }
+                />{" "}
+                    Twitter
+                  </Button>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
-              <a
-                href="https://www.creative-tim.com/presentation?ref=mkr-footer"
-                className={classes.block}
-                target="_blank"
+              <Button
+                color="transparent"
+                className={
+                  classes.navLink + " " + classes.socialIconsButton
+                }
               >
-                About us
-              </a>
+                <i
+                  className={
+                    classes.socialIcons +
+                    " " +
+                    classes.marginRight5 +
+                    " fab fa-facebook"
+                  }
+                />{" "}
+                    Facebook
+                  </Button>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
-              <a
-                href="http://blog.creative-tim.com/?ref=mkr-footer"
-                className={classes.block}
-                target="_blank"
+              <Button
+                color="transparent"
+                className={
+                  classes.navLink + " " + classes.socialIconsButton
+                }
               >
-                Blog
-              </a>
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a
-                href="https://www.creative-tim.com/license?ref=mkr-footer"
-                className={classes.block}
-                target="_blank"
-              >
-                Licenses
-              </a>
+                <i
+                  className={
+                    classes.socialIcons +
+                    " " +
+                    classes.marginRight5 +
+                    " fab fa-instagram"
+                  }
+                />{" "}
+                    Instagram
+                  </Button>
             </ListItem>
           </List>
         </div>
         <div className={classes.right}>
-          &copy; {1900 + new Date().getYear()} , made with{" "}
-          <Favorite className={classes.icon} /> by{" "}
+          &copy; {1900 + new Date().getYear()}
+          <Favorite className={classes.icon} />
           <a
             href="https://www.creative-tim.com?ref=mkr-footer"
             className={aClasses}
             target="_blank"
           >
-            Creative Tim
-          </a>{" "}
-          for a better web.
+            Usaurios-Dev
+          </a>
         </div>
       </div>
     </footer>
