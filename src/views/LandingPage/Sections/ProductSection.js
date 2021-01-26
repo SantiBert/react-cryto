@@ -23,26 +23,26 @@ export default function ProductSection() {
       <div>
         <GridContainer>
           <GridItem xs={12} sm={12} md={4}>
-            <CardSection key='btc' name="Bitcoin (BTC)" />
+            <CardSection key='btc' name="Bitcoin (BTC)" icon="fab fa-btc" />
           </GridItem>
           <GridItem xs={12} sm={12} md={4}>
-            <CardSection key='btc' name="Ethereum (ETH)" />
+            <CardSection key='btc' name="Ethereum (ETH)" icon="fab fa-ethereum" />
           </GridItem>
           <GridItem xs={12} sm={12} md={4}>
-            <CardSection key='btc' name="Litecoin" />
+            <CardSection key='btc' name="Litecoin" icon="fab fa-btc" />
           </GridItem>
         </GridContainer>
       </div>
       <div>
         <GridContainer>
           <GridItem xs={12} sm={12} md={4}>
-            <CardSection key='btc' name="Tether (USDT)" />
+            <CardSection key='btc' name="Tether (USDT)" icon="fab fa-btc" />
           </GridItem>
           <GridItem xs={12} sm={12} md={4}>
-            <CardSection key='btc' name="DAI" />
+            <CardSection key='btc' name="DAI" icon="fab fa-btc" />
           </GridItem>
           <GridItem xs={12} sm={12} md={4}>
-            <CardSection key='btc' name="Bitcoin Cash" />
+            <CardSection key='btc' name="Bitcoin Cash" icon="fa fa-btc" />
           </GridItem>
         </GridContainer>
       </div>

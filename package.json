@@ -20,6 +20,7 @@
     "react-scripts": "3.4.1",
     "react-slick": "0.26.1",
     "react-swipeable-views": "0.13.9",
+    "websocket": "^1.0.33",
     "ws": "^7.4.2"
   },
   "devDependencies": {
