@@ -42,7 +42,7 @@ export default function ProductSection() {
             <CardSection code="dai" keyC="dai-c" keyV="dai-v" name="DAI" icon="fab fa-btc" />
           </GridItem>
           <GridItem xs={12} sm={12} md={4}>
-            <CardSection code="bcash" keyC="bcash-c" keyV="bcash-v" name="Bitcoin Cash" icon="fa fa-btc" />
+            <CardSection code="bch" keyC="bcash-c" keyV="bcash-v" name="Bitcoin Cash" icon="fa fa-btc" />
           </GridItem>
         </GridContainer>
       </div>
