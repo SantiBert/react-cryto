@@ -26,6 +26,7 @@ export default function Cards(props) {
 
     var channelName = "live_trades_" + "btc" + "usd";
 
+    var coinType = "ARS";
 
     var usd_value = 153;
 
@@ -47,12 +48,35 @@ export default function Cards(props) {
     };
     ws2.onmessage = function (evt) {
       let response = JSON.parse(evt.data);
-      console.log("response");
+      NewMessage(response);
     };
     ws2.onclose = function () {
       console.log("Websocket connection closed");
     };
 
+    function GetResult(price, percent){
+      // realizar el calculo
+      //Recordar chequear por la moneda seleccionada
+      if (coinType === "ARS") {
+          let conversion = price * usd_value
+          let result = conversion * (1 + percent);
+          console.log(conversion);
+          return result;
+          }
+  }
+  
+    function NewMessage(data){
+      if(data.channel === channelName){
+          if(data.event === "trade"){
+              let sellValue = GetResult(data.data.price, sellPercent);
+              let buyValue = GetResult(data.data.price, buyPercent);
+              document.getElementById("undefinedcompra").innerHTML= sellValue
+              document.getElementById("undefinedventa").innerHTML= buyValue
+              //this.state.buyValue = sellValue;
+              //this.state.buyValue = sellValue;
+          }
+      }
+  }
 
 
   }
@@ -62,9 +86,9 @@ export default function Cards(props) {
       <CardHeader color="info"><i className={props.icon}></i> {props.name} </CardHeader>
       <CardBody>
         <h4 className={classes.cardTitle}>Compra</h4>
-        <Button color="primary" size="sm">{props.buyvalue}</Button>
+        <Button  id={props.key+"compra"} color="primary" size="sm">{props.sellValue}</Button>
         <h4 className={classes.cardTitle}>Venta</h4>
-        <Button color="primary" size="sm">{props.sellvalue}</Button>
+        <Button id={props.key+"venta"} color="primary" size="sm">{props.buyValue}</Button>
       </CardBody>
     </Card>
   );
