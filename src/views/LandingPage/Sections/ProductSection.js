@@ -23,26 +23,26 @@ export default function ProductSection() {
       <div>
         <GridContainer>
           <GridItem xs={12} sm={12} md={4}>
-            <CardSection key='btc' name="Bitcoin (BTC)" icon="fab fa-btc" />
+            <CardSection code="btc" keyC="btc-c" keyV="btc-v" name="Bitcoin (BTC)" icon="fab fa-btc" />
           </GridItem>
           <GridItem xs={12} sm={12} md={4}>
-            <CardSection key='btc' name="Ethereum (ETH)" icon="fab fa-ethereum" />
+            <CardSection code="eth" keyC="eth-c" keyV="eth-v" name="Ethereum (ETH)" icon="fab fa-ethereum" />
           </GridItem>
           <GridItem xs={12} sm={12} md={4}>
-            <CardSection key='btc' name="Litecoin" icon="fab fa-btc" />
+            <CardSection code="ltc" keyC="ltc-c" keyV="ltc-v" name="Litecoin" icon="fab fa-btc" />
           </GridItem>
         </GridContainer>
       </div>
       <div>
         <GridContainer>
           <GridItem xs={12} sm={12} md={4}>
-            <CardSection key='btc' name="Tether (USDT)" icon="fab fa-btc" />
+            <CardSection code="ustd" keyC="ustd-c" keyV="ustd-v" name="Tether (USDT)" icon="fab fa-btc" />
           </GridItem>
           <GridItem xs={12} sm={12} md={4}>
-            <CardSection key='btc' name="DAI" icon="fab fa-btc" />
+            <CardSection code="dai" keyC="dai-c" keyV="dai-v" name="DAI" icon="fab fa-btc" />
           </GridItem>
           <GridItem xs={12} sm={12} md={4}>
-            <CardSection key='btc' name="Bitcoin Cash" icon="fa fa-btc" />
+            <CardSection code="bcash" keyC="bcash-c" keyV="bcash-v" name="Bitcoin Cash" icon="fa fa-btc" />
           </GridItem>
         </GridContainer>
       </div>
